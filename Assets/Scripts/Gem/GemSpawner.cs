@@ -14,12 +14,7 @@ public class GemSpawner : MonoBehaviour
 
     private void Awake()
     {
-        //CheckPossibilitySpawnGem();
-
-        for (int i = 0; i < _spawnPoints.Count; i++)
-        {
-            SpawnGem(_spawnPoints[i].transform);
-        }
+        CheckPossibilitySpawnGem();
     }
 
     private void Update()
