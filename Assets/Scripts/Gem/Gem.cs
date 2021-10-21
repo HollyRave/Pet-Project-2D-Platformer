@@ -9,6 +9,7 @@ public class Gem : MonoBehaviour
     {
         if (collision.TryGetComponent<Hero>(out Hero hero))
         {
+            Debug.Log("Собрали гем");
             CollectedGem?.Invoke();
             Destroy(gameObject);
         }

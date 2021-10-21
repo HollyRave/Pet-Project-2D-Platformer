@@ -1,38 +1,28 @@
+using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Gem))]
 public class SpawnPoint : MonoBehaviour
 {
-    public bool IsBusyForSpawn { get; private set; } = false;
+    [SerializeField] private GameObject _gem;
+    [SerializeField] private float _secondsBetweenSpawn;
 
-    [SerializeField] private GemSpawner _gemSpawner;
-    private Gem _gem;
-
-    private void Awake()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        _gem = GetComponent<Gem>();
+        if (collision.TryGetComponent<Hero>(out Hero hero))
+        {
+            CollectGem();
+        }
     }
 
-    private void OnEnable()
+    private void CollectGem()
     {
-        _gem.CollectedGem += MakeFreeForSpawn;
-        _gemSpawner.SpawnedGem += MakeBusyForSpawn;
+        _gem.SetActive(false);
+        StartCoroutine(SpawnGem());
     }
 
-    private void OnDisable()
+    private IEnumerator SpawnGem()
     {
-        _gem.CollectedGem -= MakeFreeForSpawn;
-        _gemSpawner.SpawnedGem -= MakeBusyForSpawn;
-    }
-
-
-    private void MakeFreeForSpawn()
-    {
-        IsBusyForSpawn = false;
-    }
-
-    private void MakeBusyForSpawn()
-    {
-        IsBusyForSpawn = true;
+        yield return new WaitForSeconds(_secondsBetweenSpawn);
+        _gem.SetActive(true);
     }
 }
