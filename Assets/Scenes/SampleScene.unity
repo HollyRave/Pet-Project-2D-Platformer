@@ -607,7 +607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -844,6 +844,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 136841272526670263, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452221593793183784, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8501699
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452221593793183784, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.09536159
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452221593793183784, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

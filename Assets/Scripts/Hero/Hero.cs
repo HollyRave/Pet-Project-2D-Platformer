@@ -13,7 +13,7 @@ public class Hero : MonoBehaviour
 
     private void Awake()
     {
-        //CheckedCurrentHealthCount?.Invoke(_health);
+        CheckedCurrentHealthCount?.Invoke(_health);
     }
 
     private void OnEnable()
@@ -40,7 +40,7 @@ public class Hero : MonoBehaviour
         }
         else
         {
-            Debug.Log("Вызываем метод с показом ХП");
+            _health--;
             CheckedCurrentHealthCount?.Invoke(_health);
         }
     }
