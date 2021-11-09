@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 192695811192830919}
   - component: {fileID: 5452221593793183784}
   - component: {fileID: 2288188873478642062}
+  - component: {fileID: 329870334}
   m_Layer: 0
   m_Name: Opossum
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 764fc52f7266843e9b3dac17448f873f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.125, y: 0.875}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11647606, y: -0.11647624}
+  m_Offset: {x: 0.09536159, y: -0.11647624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84466743, y: 0.6420475}
+  m_Size: {x: 0.8501699, y: 0.6420475}
   m_EdgeRadius: 0
 --- !u!50 &2288188873478642062
 Rigidbody2D:
@@ -164,3 +165,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &329870334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136841272526670261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ff15b3aec06b24c8ddd866a8d516b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemySpot: {fileID: 0}
+  _speedEnemy: 10
