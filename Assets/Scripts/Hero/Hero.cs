@@ -11,7 +11,7 @@ public class Hero : MonoBehaviour
     [SerializeField] private List<Enemy> _enemies;
 
 
-    private void Awake()
+    private void Start()
     {
         CheckedCurrentHealthCount?.Invoke(_health);
     }
@@ -47,6 +47,7 @@ public class Hero : MonoBehaviour
 
     private void Death()
     {
-
+        Debug.Log("Вы проиграли");
+        Time.timeScale = 0;
     }
 }

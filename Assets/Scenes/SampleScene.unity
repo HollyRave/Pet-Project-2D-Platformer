@@ -800,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 1362148384}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _enemySpeed
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _speedEnemy
@@ -811,12 +811,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1362148384}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: _moveDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _enemyTargetSpot
       value: 
       objectReference: {fileID: 1362148384}
     - target: {fileID: 136841272526670261, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: m_Name
       value: Opossum 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 136841272526670261, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136841272526670262, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: m_RootOrder
@@ -1647,7 +1655,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemySpot_2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1659,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362148383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8599997, y: -2.864452, z: 16.7106}
+  m_LocalPosition: {x: 5.95, y: -2.864452, z: 16.7106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1808533621}
@@ -1974,7 +1982,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemySpot_1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1986,7 +1994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875340516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8199997, y: -2.864452, z: 16.7106}
+  m_LocalPosition: {x: -5.83, y: -2.864452, z: 16.710602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1808533621}
@@ -2922,7 +2930,7 @@ PrefabInstance:
       objectReference: {fileID: 1875340517}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _enemySpeed
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _speedEnemy
@@ -2933,12 +2941,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1875340517}
     - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: _moveDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 329870334, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: _enemyTargetSpot
       value: 
       objectReference: {fileID: 1875340517}
     - target: {fileID: 136841272526670261, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: m_Name
       value: Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 136841272526670261, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136841272526670262, guid: b4d6eb49e3184fe49a3b18a253e9f4c4, type: 3}
       propertyPath: m_RootOrder
