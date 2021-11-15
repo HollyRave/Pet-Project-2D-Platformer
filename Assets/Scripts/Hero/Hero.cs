@@ -8,39 +8,30 @@ public class Hero : MonoBehaviour
     public event UnityAction<int> CheckedCurrentHealthCount;
 
     [SerializeField] private int _health;
-    [SerializeField] private List<Enemy> _enemies;
-
 
     private void Start()
     {
         CheckedCurrentHealthCount?.Invoke(_health);
     }
 
-    private void OnEnable()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (var item in _enemies)
+        if (collision.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            item.HeroAttacked += TakeDamage;
-        }
-    }
-
-    private void OnDisable()
-    {
-        foreach (var item in _enemies)
-        {
-            item.HeroAttacked -= TakeDamage;
+            TakeDamage();
         }
     }
 
     private void TakeDamage()
     {
+        _health--;
+
         if (_health == 0)
         {
             Death();
         }
         else
         {
-            _health--;
             CheckedCurrentHealthCount?.Invoke(_health);
         }
     }

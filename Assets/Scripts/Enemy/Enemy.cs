@@ -5,13 +5,4 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public event UnityAction HeroAttacked;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.TryGetComponent<Hero>(out Hero hero))
-        {
-            HeroAttacked?.Invoke();
-        }
-    }
 }

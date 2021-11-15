@@ -3,26 +3,27 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] private GameObject _gem;
+    [SerializeField] private Gem _gem;
     [SerializeField] private float _secondsBetweenSpawn;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnEnable()
     {
-        if (collision.TryGetComponent<Hero>(out Hero hero))
-        {
-            CollectGem();
-        }
+        _gem.Collected += StartSpawnGem;
     }
 
-    private void CollectGem()
+    private void OnDisable()
     {
-        _gem.SetActive(false);
+        _gem.Collected -= StartSpawnGem;
+    }
+
+    private void StartSpawnGem()
+    {
         StartCoroutine(SpawnGem());
     }
 
     private IEnumerator SpawnGem()
     {
         yield return new WaitForSeconds(_secondsBetweenSpawn);
-        _gem.SetActive(true);
+        _gem.gameObject.SetActive(true);
     }
 }

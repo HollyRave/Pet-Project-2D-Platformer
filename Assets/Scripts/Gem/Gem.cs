@@ -3,15 +3,14 @@ using UnityEngine.Events;
 
 public class Gem : MonoBehaviour
 {
-    public event UnityAction CollectedGem;
+    public event UnityAction Collected;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Hero>(out Hero hero))
         {
-            Debug.Log("Собрали гем");
-            CollectedGem?.Invoke();
-            Destroy(gameObject);
+            Collected?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }
