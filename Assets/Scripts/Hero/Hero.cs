@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Hero : MonoBehaviour
 {
     public event UnityAction<int> CheckedCurrentHealthCount;
+    public event UnityAction<int> ChangedHealth;
 
     [SerializeField] private int _health;
 
@@ -32,7 +33,7 @@ public class Hero : MonoBehaviour
         }
         else
         {
-            CheckedCurrentHealthCount?.Invoke(_health);
+            ChangedHealth?.Invoke(_health);
         }
     }
 

@@ -26,7 +26,7 @@ public class HeroMover : MonoBehaviour
     {
         Move();
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }

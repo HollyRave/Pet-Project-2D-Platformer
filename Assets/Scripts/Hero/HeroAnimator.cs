@@ -32,7 +32,7 @@ public class HeroAnimator : MonoBehaviour
 
     private void ChangeAnimation(float speed)
     {
-        _animator.SetFloat("Speed", Mathf.Abs(speed));
+        _animator.SetFloat(AnimatorController.Params.Speed, Mathf.Abs(speed));
 
         if (speed < 0)
         {
