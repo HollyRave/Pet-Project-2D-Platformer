@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class Hero : MonoBehaviour
 {
-    public event UnityAction<int> CheckedCurrentHealthCount;
+    public event UnityAction<int> CheckedStartHealthCount;
     public event UnityAction<int> HealthChanged;
 
     [SerializeField] private int _health;
 
     private void Start()
     {
-        CheckedCurrentHealthCount?.Invoke(_health);
+        CheckedStartHealthCount?.Invoke(_health);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

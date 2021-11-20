@@ -9,13 +9,13 @@ public class HealthCounter : MonoBehaviour
 
     private void OnEnable()
     {
-        _hero.CheckedCurrentHealthCount += PrintHealthText;
+        _hero.CheckedStartHealthCount += PrintHealthText;
         _hero.HealthChanged += PrintHealthText;
     }
 
     private void OnDisable()
     {
-        _hero.CheckedCurrentHealthCount -= PrintHealthText;
+        _hero.CheckedStartHealthCount -= PrintHealthText;
         _hero.HealthChanged -= PrintHealthText;
     }
 
