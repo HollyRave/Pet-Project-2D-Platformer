@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Hero : MonoBehaviour
 {
     public event UnityAction<int> CheckedCurrentHealthCount;
-    public event UnityAction<int> ChangedHealth;
+    public event UnityAction<int> HealthChanged;
 
     [SerializeField] private int _health;
 
@@ -29,15 +29,15 @@ public class Hero : MonoBehaviour
 
         if (_health == 0)
         {
-            Death();
+            Die();
         }
         else
         {
-            ChangedHealth?.Invoke(_health);
+            HealthChanged?.Invoke(_health);
         }
     }
 
-    private void Death()
+    private void Die()
     {
         Debug.Log("Вы проиграли");
         Time.timeScale = 0;

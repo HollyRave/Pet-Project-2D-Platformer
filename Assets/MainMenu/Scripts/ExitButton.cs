@@ -1,23 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
+[RequireComponent(typeof(Button))]
 public class ExitButton : MonoBehaviour
 {
     [SerializeField] private Color _targetColor;
     [SerializeField] private float _durationAnimation;
 
-    private Image image;
+    private Button _button;
+    private Image _image;
 
-    private void Start()
+    private void Awake()
     {
-        image = GetComponent<Image>();
+        _image = GetComponent<Image>();
+        _button = GetComponent<Button>();
     }
-    public void OnButtonClick()
+
+    private void OnEnable()
     {
-        image.DOColor(_targetColor, _durationAnimation)
+        _button.onClick.AddListener(OnClick);
+    }
+
+    private void OnDisable()
+    {
+        _button.onClick.RemoveListener(OnClick);
+    }
+
+    private void OnClick()
+    {
+        _image.DOColor(_targetColor, _durationAnimation)
             .SetLoops(2, LoopType.Yoyo);
     }
 }
